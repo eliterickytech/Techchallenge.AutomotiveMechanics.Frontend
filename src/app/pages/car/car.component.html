@@ -1,0 +1,45 @@
+  <!-- BEGIN breadcrumb -->
+  <ol class="breadcrumb float-xl-end">
+	<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+	<li class="breadcrumb-item"><a href="javascript:;">Carros</a></li>
+	<li class="breadcrumb-item active">Listar</li>
+</ol>
+<!-- END breadcrumb -->
+<!-- BEGIN page-header -->
+<h1 class="page-header">Carros <small>lista de carros...</small></h1>
+<!-- END page-header -->
+<div class="Row">
+	<div class="col-xl-12 text-end">
+		<button class="btn btn-success align-items-end" (click)="redirectAddCar()">Novo carro</button>
+	</div>
+</div>
+<div class="Row mt-10px">
+	<!-- BEGIN col-12 -->
+	<div class="col-xl-12">
+		<panel title="Modelos">
+			<div class="table-responsive">
+				<table class="table table-striped mb-0 align-middle">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Placa</th>
+                            <th>Ano</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let car of carResultModel.data">
+							<td>
+								{{ car.id }}
+							</td>
+							<td>{{ car.plate}}</td>
+                            <td>{{ car.yearManufactured}}</td>
+
+						</tr>
+					</tbody>
+				</table>
+			</div>		
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-12 -->  
+</div>

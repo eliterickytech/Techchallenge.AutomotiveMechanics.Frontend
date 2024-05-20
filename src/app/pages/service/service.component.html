@@ -1,0 +1,46 @@
+  <!-- BEGIN breadcrumb -->
+  <ol class="breadcrumb float-xl-end">
+	<li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+	<li class="breadcrumb-item"><a href="javascript:;">Modelos</a></li>
+	<li class="breadcrumb-item active">Listar</li>
+</ol>
+<!-- END breadcrumb -->
+<!-- BEGIN page-header -->
+<h1 class="page-header">Modelo <small>lista de Modelos...</small></h1>
+<!-- END page-header -->
+<div class="Row">
+	<div class="col-xl-12 text-end">
+		<button class="btn btn-success align-items-end" (click)="redirectAddService()">Novo Serviço</button>
+	</div>
+</div>
+<div class="Row mt-10px">
+	<!-- BEGIN col-12 -->
+	<div class="col-xl-12">
+		<panel title="Modelos">
+			<div class="table-responsive">
+				<table class="table table-striped mb-0 align-middle">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Serviço</th>
+                            <th>Placa</th>
+                            <th>Ano de Fabricação</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr *ngFor="let service of serviceResultModel.data">
+							<td>
+								{{ service.id }}
+							</td>
+							<td>{{ service.name}}</td>
+                            <td>{{ service.carResult.data.plate}}</td>
+                            <td>{{ service.carResult.data.yearManufactured}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>		
+		</panel>
+		<!-- END panel -->
+	</div>
+	<!-- END col-12 -->  
+</div>

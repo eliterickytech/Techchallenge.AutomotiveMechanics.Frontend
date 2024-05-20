@@ -1,0 +1,48 @@
+<!-- begin breadcrumb -->
+<ol class="breadcrumb float-xl-end">
+    <li class="breadcrumb-item"><a href="javascript:;">Home</a></li>
+    <li class="breadcrumb-item"><a href="javascript:;">Carro</a></li>
+    <li class="breadcrumb-item active"><a href="javascript:;">Incluir</a></li>
+  </ol>
+  <!-- end breadcrumb -->
+  <!-- begin page-header -->
+  <h1 class="page-header">Carro <small>adicionar novo carro...</small></h1>
+  <!-- end page-header -->
+  
+  <!-- begin panel -->
+		<!-- BEGIN panel -->
+		<panel title="Adicionar um novo modelo" data-sortable-id="form-stuff-1">
+			<div>
+				<form #f="ngForm" (ngSubmit)="formSubmit(f)" class="fs-13px">
+                    <div class="row mb-15px">
+						<label class="form-label col-form-label col-md-3">Placa</label>
+						<div class="col-md-9">
+							<input type="text" name="plate" class="form-control mb-5px" placeholder="Placa" ngModel required #plate="ngModel" />							
+						</div>
+					</div>
+					<div class="row mb-15px">
+						<label class="form-label col-form-label col-md-3">Ano de fabricação</label>
+						<div class="col-md-9">
+							<input type="number" name="yearManufactured" class="form-control mb-5px" placeholder="Ano de fabricação" ngModel required #yearManufactured="ngModel" />							
+						</div>
+					</div>
+                    <div class="row mb-15px">
+						<label class="form-label col-form-label col-md-3">Modelo</label>
+						<div class="col-md-9">
+                            <select class="form-select" name="modelId" ngModel required #modelId="ngModel">
+								<option *ngFor="let model of modelResultModel.data" [value]="model.id">{{ model.name }}</option>
+							</select>
+						</div>
+					</div> 
+					<div class="row mb-15px">
+						
+						<div class="col-md-12 text-end">
+                            <button name="submit" class="btn btn-success">Salvar</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</panel>
+		<!-- END panel -->
+  <!-- end panel -->
+  

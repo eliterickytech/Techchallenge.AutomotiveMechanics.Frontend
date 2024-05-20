@@ -1,0 +1,55 @@
+<!-- BEGIN register -->
+<div class="register register-with-news-feed">
+	<!-- BEGIN news-feed -->
+	<div class="news-feed">
+		<div class="news-image" style="background-image: url(/assets/img/login-bg/Register.jpg)"></div>
+		<div class="news-caption">
+			<h4 class="caption-title"><b>Automotive</b> Mechanics</h4>
+			<p>
+				Registrar novos usuários para o sistema
+			</p>
+		</div>
+	</div>
+	<!-- END news-feed -->
+	
+	<!-- BEGIN register-container -->
+	<div class="register-container">
+		<!-- BEGIN register-header -->
+		<div class="register-header mb-25px h1">
+			<div class="mb-1">Cadastrar</div>
+			<small class="d-block fs-15px lh-16">Criar novas contas para o sistema</small>
+		</div>
+		<!-- END register-header -->
+		
+		<!-- BEGIN register-content -->
+		<div class="register-content">
+			<form #f="ngForm" (ngSubmit)="formSubmit(f)" class="fs-13px">
+				<div class="mb-3">
+					<label class="mb-2">Nome <span class="text-danger">*</span></label>
+                    <input type="text" name="name" class="form-control fs-13px" placeholder="Nome" ngModel required #name="ngModel" />
+				</div>
+				<div class="mb-3">
+					<label class="mb-2">Email <span class="text-danger">*</span></label>
+					<input type="email" name="email" class="form-control fs-13px" placeholder="Email address" ngModel required #email="ngModel" />
+				</div>
+				<div class="mb-4">
+					<label class="mb-2">Password <span class="text-danger">*</span></label>
+					<input type="password" name="password" class="form-control fs-13px" placeholder="Password" ngModel required #password="ngModel"/>
+				</div>
+				<div class="mb-4">
+					<button type="submit" class="btn btn-theme d-block w-100 btn-lg h-45px fs-13px">Cadastrar</button>
+				</div>
+				<div class="mb-4 pb-5">
+					Clique <a routerLink="/login">aqui</a> para login.
+				</div>
+				<hr class="bg-gray-600 opacity-2" />
+				<p class="text-center text-gray-600">
+					&copy; Automotive Mechanics All Right Reserved 2024
+				</p>
+			</form>
+		</div>
+		<!-- END register-content -->
+	</div>
+	<!-- END register-container -->
+</div>
+<!-- END register -->
